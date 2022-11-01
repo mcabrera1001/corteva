@@ -16,8 +16,8 @@ if config.config_file_name is not None:
 
 # add your model's MetaData object here
 # for 'autogenerate' support
-from models import *
-target_metadata = [Weather.Base.metadata, CropYield.Base.metadata]
+from models import Weather, CropYield
+target_metadata = [Weather.metadata]
 # target_metadata = None
 
 # other values from the config, defined by the needs of env.py,
