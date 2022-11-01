@@ -3,8 +3,8 @@ from config.flask_and_database import db
 
 class Weather(db.Model):
     active = db.Column(db.Boolean, default=True)  # for soft delete functionality.
-    date = db.Column(db.String(8), unique=True)
-    station = db.Column(db.String(11), primary_key=True)
+    date = db.Column(db.String(8), primary_key=True)
+    station = db.Column(db.String(11))
     min_temperature = db.Column(db.Float)
     max_temperature = db.Column(db.Float)
     precipitation = db.Column(db.Float)
