@@ -7,6 +7,3 @@ class Weather(db.Model):
     min_temperature = db.Column(db.Float, nullable=True)
     max_temperature = db.Column(db.Float, nullable=True)
     precipitation = db.Column(db.Float, nullable=True)
-
-
-db.create_all()
