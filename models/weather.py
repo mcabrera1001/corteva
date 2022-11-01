@@ -8,3 +8,10 @@ class Weather(db.Model):
     min_temperature = db.Column(db.Float)
     max_temperature = db.Column(db.Float)
     precipitation = db.Column(db.Float)
+
+    def __init__(self, date, station, min_temperature, max_temperature, precipitation):
+        self.date = date
+        self.station = station
+        self.min_temperature = min_temperature
+        self.max_temperature = max_temperature
+        self.precipitation = precipitation

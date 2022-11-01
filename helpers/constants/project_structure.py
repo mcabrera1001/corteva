@@ -1,1 +1,1 @@
-WEATHER_DATA_FOLDER = 'wx_data'
+WEATHER_DATA_FOLDER = "wx_data"
