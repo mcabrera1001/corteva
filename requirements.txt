@@ -3,5 +3,5 @@ Flask-SQLAlchemy
 flask
 pylint
 coverage
-isort
 alembic
+black

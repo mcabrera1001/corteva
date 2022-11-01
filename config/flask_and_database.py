@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+
 from constants.database import SQLITE_DB
 
 db = SQLAlchemy()

@@ -9,5 +9,6 @@ docker exec -d corteva-weather_api-1 alembic upgrade head
 
 
 docker exec corteva-weather_api-1 pylint models
+docker exec corteva-weather_api-1 black .
 
 Pylint ignored rules C0114
