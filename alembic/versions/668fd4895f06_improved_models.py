@@ -22,7 +22,7 @@ def upgrade() -> None:
     sa.Column('active', sa.Boolean(), nullable=True),
     sa.Column('year', sa.Integer(), nullable=False),
     sa.Column('crop', sa.String(length=10), nullable=True),
-    sa.Column('crop_yield_1000_megatons', sa.Integer(), nullable=False),
+    sa.Column('crop_yield_1000_megatons', sa.Integer(), nullable=True),
     sa.PrimaryKeyConstraint('year')
     )
     op.create_table('weather',

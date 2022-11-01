@@ -1,5 +1,8 @@
 from flask import jsonify, Flask
 from models import Weather
+import logging
+
+logging.basicConfig(filename='logs/ingest.log', encoding='utf-8', level=logging.DEBUG)
 
 from config.flask_and_database import db, app
 

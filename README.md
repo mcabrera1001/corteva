@@ -10,5 +10,6 @@ docker exec corteva-weather_api-1 alembic upgrade head
 
 docker exec corteva-weather_api-1 pylint models
 docker exec corteva-weather_api-1 black .
+docker exec corteva-weather_api-1 python3 ingest_data.py test.txt
 
 Pylint ignored rules C0114
