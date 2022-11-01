@@ -6,4 +6,5 @@ WORKDIR /app
 COPY requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
 COPY . .
-ENV FLASK_APP config/flask_and_database
+ENV FLASK_APP endpoints/app.py
+CMD [ "flask", "run"]
