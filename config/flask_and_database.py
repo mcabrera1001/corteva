@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
-from constants.database import SQLITE_DB
+from helpers.constants.database import SQLITE_DB
 
 db = SQLAlchemy()
 app = Flask(__name__)
