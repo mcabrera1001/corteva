@@ -7,7 +7,9 @@ class CropYield(db.Model):
     active = db.Column(db.Boolean, default=True)  # for soft delete functionality.
     year = db.Column(db.Integer, primary_key=True)
     crop = db.Column(db.String(10))
-    crop_yield_1000_megatons = db.Column(db.Integer) # specifying the unit in the title helps a lot when database info is lost.
+    crop_yield_1000_megatons = db.Column(
+        db.Integer
+    )  # specifying the unit in the title helps a lot when database info is lost.
 
     def __init__(self, year, crop, crop_yield_1000_megatons):
         self.year = year

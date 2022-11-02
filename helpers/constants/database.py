@@ -15,7 +15,7 @@ WEATHER_MODEL_COLUMNS_IN_ORDER = [
 ]
 
 # Crop Yield Model
-YEAR = 'year'
-CROP = 'crop'
-CROP_YIELD_1000_MEGATONS = 'crop_yield_1000_megatons'
+YEAR = "year"
+CROP = "crop"
+CROP_YIELD_1000_MEGATONS = "crop_yield_1000_megatons"
 CROP_YIELD_MODEL_COLUMNS_IN_ORDER = [YEAR, CROP_YIELD_1000_MEGATONS, CROP]
