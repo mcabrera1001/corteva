@@ -19,3 +19,8 @@ YEAR = "year"
 CROP = "crop"
 CROP_YIELD_1000_MEGATONS = "crop_yield_1000_megatons"
 CROP_YIELD_MODEL_COLUMNS_IN_ORDER = [YEAR, CROP_YIELD_1000_MEGATONS, CROP]
+
+# station weather statistics model
+AVERAGE_MIN_TEMPERATURE = 'average_min_temperature'
+AVERAGE_MAX_TEMPERATURE = 'average_max_temperature'
+TOTAL_PRECIPITATION = 'total_precipitation'

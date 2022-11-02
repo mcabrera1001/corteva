@@ -1,7 +1,16 @@
 from config.flask_and_database import db
+from helpers.constants import (
+    STATION,
+    DATE,
+    MAX_TEMPERATURE,
+    MIN_TEMPERATURE,
+    PRECIPITATION,
+)
+from sqlalchemy_serializer import SerializerMixin
 
+class Weather(db.Model, SerializerMixin):
+    serialize_only = (DATE, STATION, MIN_TEMPERATURE, MAX_TEMPERATURE, PRECIPITATION,)
 
-class Weather(db.Model):
     active = db.Column(db.Boolean, default=True)  # for soft delete functionality.
     date = db.Column(db.String(8), primary_key=True)
     station = db.Column(db.String(11), primary_key=True)

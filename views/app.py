@@ -1,8 +1,9 @@
-from flask import jsonify, Flask
+from flask import jsonify, Flask, request
 from models import Weather
 import logging
+from controllers.app_controllers import get_weather_data_by_station_and_date
 
-logging.basicConfig(filename="logs/ingest.log", encoding="utf-8", level=logging.DEBUG)
+logging.basicConfig(filename="logs/api.log", filemode="w", encoding="utf-8", level=logging.DEBUG)
 
 from config.flask_and_database import db, app
 
@@ -14,9 +15,11 @@ def hello_world():
 
 @app.route("/api/weather", methods=["GET"])
 def get_weather():
-    print(Weather.query.all())
-    return jsonify(Weather.query.first())
-    return "<p>Hello, World!</p>"
+    # query = Weather.query.first()
+    # return query.to_dict()
+    query_results = get_weather_data_by_station_and_date(request.args)
+    results = [result.to_dict() for result in query_results]
+    return results
 
 
 if __name__ == "__main__":

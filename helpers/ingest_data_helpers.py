@@ -19,6 +19,3 @@ def process_ingestion_results(ingestion_results):
 def generate_list_of_files(directory):
     data_files = os.listdir(directory)
     return data_files
-
-
-
