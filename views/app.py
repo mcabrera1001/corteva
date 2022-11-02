@@ -1,11 +1,13 @@
-from flask import Flask, request
 import logging
+
+from flask import Flask, request
+
+from config.flask_and_database import app, db
 from controllers.app_controllers import (
-    get_weather_data_by_station_and_date,
     get_crop_yield_data_by_year,
+    get_weather_data_by_station_and_date,
     get_weather_statistics,
 )
-from config.flask_and_database import db, app
 
 logging.basicConfig(
     filename="logs/api.log", filemode="w", encoding="utf-8", level=logging.DEBUG
