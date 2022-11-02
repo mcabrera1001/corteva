@@ -1,4 +1,23 @@
-# corteva_challenge
+## Prerequisites
+    - Docker (at least 4.10.1)
+## Running
+```docker compose -f docker-compose.yml up --build```
+
+
+## Folder Structure
+
+## Testing
+
+## REST API
+
+## Logging, Alembic, Coverage, Black Autoformatter
+
+## TODO
+- Swagger docs
+- this api needs better error handling
+- discuss alternative ways to calculate the weather stats data
+- this repo needs a makefile
+
 
 docker compose -f docker-compose.yml up --build
 docker compose -f docker-compose.yml build
@@ -14,8 +33,3 @@ docker exec corteva-weather_api-1 python3 ingest_data.py test.txt US_corn_grain_
 
 Pylint ignored rules C0114
 
-## TODO
-- Swagger docs
-- this api needs better error handling
-- discuss alternative ways to calculate the weather stats data
-- this repo needs a makefile

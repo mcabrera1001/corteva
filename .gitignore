@@ -1,4 +1,5 @@
 myvenv/*
-instance/*
 **/__pycache__/*
 .vscode/*
+.coverage
+logs/*
