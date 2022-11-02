@@ -6,9 +6,15 @@ from helpers.constants import (
 )
 from sqlalchemy_serializer import SerializerMixin
 
+
 class CropYield(db.Model, SerializerMixin):
     """notice there is no direct mention of corn here. I want this model to extend to any crop"""
-    serialize_only = (YEAR, CROP, CROP_YIELD_1000_MEGATONS,)
+
+    serialize_only = (
+        YEAR,
+        CROP,
+        CROP_YIELD_1000_MEGATONS,
+    )
 
     active = db.Column(db.Boolean, default=True)  # for soft delete functionality.
     year = db.Column(db.Integer, primary_key=True)

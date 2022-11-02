@@ -13,3 +13,9 @@ docker exec corteva-weather_api-1 black .
 docker exec corteva-weather_api-1 python3 ingest_data.py test.txt US_corn_grain_yield.txt
 
 Pylint ignored rules C0114
+
+## TODO
+- Swagger docs
+- this api needs better error handling
+- discuss alternative ways to calculate the weather stats data
+- this repo needs a makefile

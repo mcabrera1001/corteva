@@ -30,7 +30,7 @@ def upgrade() -> None:
         "weather",
         sa.Column("active", sa.Boolean(), nullable=True),
         sa.Column("date", sa.String(length=8), nullable=False),
-        sa.Column("station", sa.String(length=11), nullable=True),
+        sa.Column("station", sa.String(length=11), nullable=False),
         sa.Column("min_temperature", sa.Float(), nullable=True),
         sa.Column("max_temperature", sa.Float(), nullable=True),
         sa.Column("precipitation", sa.Float(), nullable=True),

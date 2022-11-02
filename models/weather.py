@@ -8,8 +8,15 @@ from helpers.constants import (
 )
 from sqlalchemy_serializer import SerializerMixin
 
+
 class Weather(db.Model, SerializerMixin):
-    serialize_only = (DATE, STATION, MIN_TEMPERATURE, MAX_TEMPERATURE, PRECIPITATION,)
+    serialize_only = (
+        DATE,
+        STATION,
+        MIN_TEMPERATURE,
+        MAX_TEMPERATURE,
+        PRECIPITATION,
+    )
 
     active = db.Column(db.Boolean, default=True)  # for soft delete functionality.
     date = db.Column(db.String(8), primary_key=True)

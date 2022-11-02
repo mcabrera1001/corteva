@@ -1,165 +1,152 @@
-11/02/2022 01:50:06 AM Successfully ingested a total of 10 out of 10 records.
-11/02/2022 01:50:06 AM Could not ingest a total of 0.
-11/02/2022 01:50:06 AM Process ingest_data_for_one_station('USC00110072.txt',) Took 0.9607 seconds
-11/02/2022 01:50:07 AM Successfully ingested a total of 10 out of 10 records.
-11/02/2022 01:50:07 AM Could not ingest a total of 0.
-11/02/2022 01:50:07 AM Process ingest_data_for_one_station('USC00110187.txt',) Took 1.1051 seconds
-11/02/2022 01:50:09 AM Successfully ingested a total of 10 out of 10 records.
-11/02/2022 01:50:09 AM Could not ingest a total of 0.
-11/02/2022 01:50:09 AM Process ingest_data_for_one_station('USC00110338.txt',) Took 1.1075 seconds
-11/02/2022 01:50:10 AM Successfully ingested a total of 10 out of 10 records.
-11/02/2022 01:50:10 AM Could not ingest a total of 0.
-11/02/2022 01:50:10 AM Process ingest_data_for_one_station('USC00111280.txt',) Took 0.9500 seconds
-11/02/2022 01:50:11 AM Successfully ingested a total of 10 out of 10 records.
-11/02/2022 01:50:11 AM Could not ingest a total of 0.
-11/02/2022 01:50:11 AM Process ingest_data_for_one_station('USC00111436.txt',) Took 1.1827 seconds
-11/02/2022 01:50:12 AM Successfully ingested a total of 10 out of 10 records.
-11/02/2022 01:50:12 AM Could not ingest a total of 0.
-11/02/2022 01:50:12 AM Process ingest_data_for_one_station('USC00112140.txt',) Took 0.9673 seconds
-11/02/2022 01:50:13 AM Successfully ingested a total of 10 out of 10 records.
-11/02/2022 01:50:13 AM Could not ingest a total of 0.
-11/02/2022 01:50:13 AM Process ingest_data_for_one_station('USC00112193.txt',) Took 1.2434 seconds
-11/02/2022 01:50:14 AM Successfully ingested a total of 10 out of 10 records.
-11/02/2022 01:50:14 AM Could not ingest a total of 0.
-11/02/2022 01:50:14 AM Process ingest_data_for_one_station('USC00112348.txt',) Took 1.1026 seconds
-11/02/2022 01:50:15 AM Successfully ingested a total of 10 out of 10 records.
-11/02/2022 01:50:15 AM Could not ingest a total of 0.
-11/02/2022 01:50:15 AM Process ingest_data_for_one_station('USC00112483.txt',) Took 1.0831 seconds
-11/02/2022 01:50:16 AM Successfully ingested a total of 10 out of 10 records.
-11/02/2022 01:50:16 AM Could not ingest a total of 0.
-11/02/2022 01:50:16 AM Process ingest_data_for_one_station('USC00113335.txt',) Took 1.0535 seconds
-11/02/2022 01:50:19 AM Successfully ingested a total of 30 out of 30 records.
-11/02/2022 01:50:19 AM Could not ingest a total of 0.
-11/02/2022 01:50:19 AM Process ingest_data_for_one_crop('US_corn_grain_yield.txt',) Took 3.0236 seconds
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://172.19.0.2:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-ERROR:config.flask_and_database:Exception on /api/weather [GET]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/app/views/app.py", line 18, in get_weather
-    return jsonify(Weather.query.first())
-  File "/usr/local/lib/python3.10/site-packages/flask/json/__init__.py", line 342, in jsonify
-    return current_app.json.response(*args, **kwargs)
-  File "/usr/local/lib/python3.10/site-packages/flask/json/provider.py", line 309, in response
-    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
-  File "/usr/local/lib/python3.10/site-packages/flask/json/provider.py", line 230, in dumps
-    return json.dumps(obj, **kwargs)
-  File "/usr/local/lib/python3.10/json/__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "/usr/local/lib/python3.10/json/encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "/usr/local/lib/python3.10/json/encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "/usr/local/lib/python3.10/site-packages/flask/json/provider.py", line 122, in _default
-    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
-TypeError: Object of type Weather is not JSON serializable
-INFO:werkzeug:172.19.0.1 - - [02/Nov/2022 12:38:38] "[35m[1mGET /api/weather HTTP/1.1[0m" 500 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://172.19.0.2:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-ERROR:config.flask_and_database:Exception on /api/weather [GET]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/app/views/app.py", line 17, in get_weather
-    return jsonify(Weather.query.first())
-  File "/usr/local/lib/python3.10/site-packages/flask/json/__init__.py", line 342, in jsonify
-    return current_app.json.response(*args, **kwargs)
-  File "/usr/local/lib/python3.10/site-packages/flask/json/provider.py", line 309, in response
-    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
-  File "/usr/local/lib/python3.10/site-packages/flask/json/provider.py", line 230, in dumps
-    return json.dumps(obj, **kwargs)
-  File "/usr/local/lib/python3.10/json/__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "/usr/local/lib/python3.10/json/encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "/usr/local/lib/python3.10/json/encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "/usr/local/lib/python3.10/site-packages/flask/json/provider.py", line 122, in _default
-    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
-TypeError: Object of type Weather is not JSON serializable
-INFO:werkzeug:172.19.0.1 - - [02/Nov/2022 12:39:53] "[35m[1mGET /api/weather HTTP/1.1[0m" 500 -
-ERROR:config.flask_and_database:Exception on /api/weather [GET]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/app/views/app.py", line 17, in get_weather
-    return jsonify(Weather.query.first())
-  File "/usr/local/lib/python3.10/site-packages/flask/json/__init__.py", line 342, in jsonify
-    return current_app.json.response(*args, **kwargs)
-  File "/usr/local/lib/python3.10/site-packages/flask/json/provider.py", line 309, in response
-    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
-  File "/usr/local/lib/python3.10/site-packages/flask/json/provider.py", line 230, in dumps
-    return json.dumps(obj, **kwargs)
-  File "/usr/local/lib/python3.10/json/__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "/usr/local/lib/python3.10/json/encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "/usr/local/lib/python3.10/json/encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "/usr/local/lib/python3.10/site-packages/flask/json/provider.py", line 122, in _default
-    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
-TypeError: Object of type Weather is not JSON serializable
-INFO:werkzeug:172.19.0.1 - - [02/Nov/2022 12:40:27] "[35m[1mGET /api/weather HTTP/1.1[0m" 500 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://172.19.0.2:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://172.19.0.2:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-ERROR:config.flask_and_database:Exception on /api/weather [GET]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/app/views/app.py", line 17, in get_weather
-    return jsonify(Weather.query.first())
-  File "/usr/local/lib/python3.10/site-packages/flask/json/__init__.py", line 342, in jsonify
-    return current_app.json.response(*args, **kwargs)
-  File "/usr/local/lib/python3.10/site-packages/flask/json/provider.py", line 309, in response
-    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
-  File "/usr/local/lib/python3.10/site-packages/flask/json/provider.py", line 230, in dumps
-    return json.dumps(obj, **kwargs)
-  File "/usr/local/lib/python3.10/json/__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "/usr/local/lib/python3.10/json/encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "/usr/local/lib/python3.10/json/encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "/usr/local/lib/python3.10/site-packages/flask/json/provider.py", line 122, in _default
-    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
-TypeError: Object of type Weather is not JSON serializable
-INFO:werkzeug:172.19.0.1 - - [02/Nov/2022 12:42:06] "[35m[1mGET /api/weather HTTP/1.1[0m" 500 -
+11/02/2022 05:10:23 PM Successfully ingested a total of 10 out of 10 records.
+11/02/2022 05:10:23 PM Process ingest_data_for_one_station([{'date': 19850101, 'max_temperature': -22.0, 'min_temperature': -128.0, 'precipitation': 94.0, 'station': 'USC00110072'}, {'date': 19850102, 'max_temperature': -122.0, 'min_temperature': -217.0, 'precipitation': 0.0, 'station': 'USC00110072'}, {'date': 19850103, 'max_temperature': -106.0, 'min_temperature': -244.0, 'precipitation': 0.0, 'station': 'USC00110072'}, {'date': 19850104, 'max_temperature': -56.0, 'min_temperature': -189.0, 'precipitation': 0.0, 'station': 'USC00110072'}, {'date': 19850105, 'max_temperature': 11.0, 'min_temperature': -78.0, 'precipitation': 0.0, 'station': 'USC00110072'}, {'date': 19850106, 'max_temperature': 28.0, 'min_temperature': -50.0, 'precipitation': 0.0, 'station': 'USC00110072'}, {'date': 19850107, 'max_temperature': 22.0, 'min_temperature': -11.0, 'precipitation': 0.0, 'station': 'USC00110072'}, {'date': 19850108, 'max_temperature': -6.0, 'min_temperature': -106.0, 'precipitation': 0.0, 'station': 'USC00110072'}, {'date': 19850109, 'max_temperature': -22.0, 'min_temperature': -100.0, 'precipitation': 0.0, 'station': 'USC00110072'}, {'date': 19850110, 'max_temperature': -39.0, 'min_temperature': -106.0, 'precipitation': 15.0, 'station': 'USC00110072'}],) Took 1.1011 seconds
+11/02/2022 05:10:23 PM No data for USC00110072 for year: 1985
+11/02/2022 05:10:23 PM Successfully ingested a total of 1 out of 1 records.
+11/02/2022 05:10:23 PM Process ingest_statistics_for_one_station(       date  max_temperature  min_temperature  precipitation      station
+0  19850101            -22.0           -128.0           94.0  USC00110072
+1  19850102           -122.0           -217.0            0.0  USC00110072
+2  19850103           -106.0           -244.0            0.0  USC00110072
+3  19850104            -56.0           -189.0            0.0  USC00110072
+4  19850105             11.0            -78.0            0.0  USC00110072
+5  19850106             28.0            -50.0            0.0  USC00110072
+6  19850107             22.0            -11.0            0.0  USC00110072
+7  19850108             -6.0           -106.0            0.0  USC00110072
+8  19850109            -22.0           -100.0            0.0  USC00110072
+9  19850110            -39.0           -106.0           15.0  USC00110072,) Took 0.1425 seconds
+11/02/2022 05:10:25 PM Successfully ingested a total of 10 out of 10 records.
+11/02/2022 05:10:25 PM Process ingest_data_for_one_station([{'date': 19850101, 'max_temperature': 183.0, 'min_temperature': -11.0, 'precipitation': 94.0, 'station': 'USC00110187'}, {'date': 19850102, 'max_temperature': -6.0, 'min_temperature': -72.0, 'precipitation': 0.0, 'station': 'USC00110187'}, {'date': 19850103, 'max_temperature': -44.0, 'min_temperature': -72.0, 'precipitation': 53.0, 'station': 'USC00110187'}, {'date': 19850104, 'max_temperature': -39.0, 'min_temperature': -67.0, 'precipitation': 94.0, 'station': 'USC00110187'}, {'date': 19850105, 'max_temperature': 50.0, 'min_temperature': -94.0, 'precipitation': 0.0, 'station': 'USC00110187'}, {'date': 19850106, 'max_temperature': 6.0, 'min_temperature': -117.0, 'precipitation': 0.0, 'station': 'USC00110187'}, {'date': 19850107, 'max_temperature': 39.0, 'min_temperature': -28.0, 'precipitation': 0.0, 'station': 'USC00110187'}, {'date': 19850108, 'max_temperature': 22.0, 'min_temperature': -39.0, 'precipitation': 0.0, 'station': 'USC00110187'}, {'date': 19850109, 'max_temperature': 11.0, 'min_temperature': -50.0, 'precipitation': 0.0, 'station': 'USC00110187'}, {'date': 19850110, 'max_temperature': -11.0, 'min_temperature': -39.0, 'precipitation': 20.0, 'station': 'USC00110187'}],) Took 1.3941 seconds
+11/02/2022 05:10:25 PM No data for USC00110187 for year: 1985
+11/02/2022 05:10:25 PM Successfully ingested a total of 1 out of 1 records.
+11/02/2022 05:10:25 PM Process ingest_statistics_for_one_station(       date  max_temperature  min_temperature  precipitation      station
+0  19850101            183.0            -11.0           94.0  USC00110187
+1  19850102             -6.0            -72.0            0.0  USC00110187
+2  19850103            -44.0            -72.0           53.0  USC00110187
+3  19850104            -39.0            -67.0           94.0  USC00110187
+4  19850105             50.0            -94.0            0.0  USC00110187
+5  19850106              6.0           -117.0            0.0  USC00110187
+6  19850107             39.0            -28.0            0.0  USC00110187
+7  19850108             22.0            -39.0            0.0  USC00110187
+8  19850109             11.0            -50.0            0.0  USC00110187
+9  19850110            -11.0            -39.0           20.0  USC00110187,) Took 0.1649 seconds
+11/02/2022 05:10:26 PM Successfully ingested a total of 10 out of 10 records.
+11/02/2022 05:10:26 PM Process ingest_data_for_one_station([{'date': 19850101, 'max_temperature': 11.0, 'min_temperature': -122.0, 'precipitation': 348.0, 'station': 'USC00110338'}, {'date': 19850102, 'max_temperature': -106.0, 'min_temperature': -183.0, 'precipitation': 3.0, 'station': 'USC00110338'}, {'date': 19850103, 'max_temperature': -56.0, 'min_temperature': -183.0, 'precipitation': 0.0, 'station': 'USC00110338'}, {'date': 19850104, 'max_temperature': -17.0, 'min_temperature': -161.0, 'precipitation': 0.0, 'station': 'USC00110338'}, {'date': 19850105, 'max_temperature': 17.0, 'min_temperature': -61.0, 'precipitation': 0.0, 'station': 'USC00110338'}, {'date': 19850106, 'max_temperature': 28.0, 'min_temperature': -39.0, 'precipitation': 0.0, 'station': 'USC00110338'}, {'date': 19850107, 'max_temperature': 17.0, 'min_temperature': -17.0, 'precipitation': 0.0, 'station': 'USC00110338'}, {'date': 19850108, 'max_temperature': -11.0, 'min_temperature': -100.0, 'precipitation': 0.0, 'station': 'USC00110338'}, {'date': 19850109, 'max_temperature': -22.0, 'min_temperature': -106.0, 'precipitation': 0.0, 'station': 'USC00110338'}, {'date': 19850110, 'max_temperature': -28.0, 'min_temperature': -94.0, 'precipitation': 28.0, 'station': 'USC00110338'}],) Took 1.3588 seconds
+11/02/2022 05:10:26 PM No data for USC00110338 for year: 1985
+11/02/2022 05:10:26 PM Successfully ingested a total of 1 out of 1 records.
+11/02/2022 05:10:26 PM Process ingest_statistics_for_one_station(       date  max_temperature  min_temperature  precipitation      station
+0  19850101             11.0           -122.0          348.0  USC00110338
+1  19850102           -106.0           -183.0            3.0  USC00110338
+2  19850103            -56.0           -183.0            0.0  USC00110338
+3  19850104            -17.0           -161.0            0.0  USC00110338
+4  19850105             17.0            -61.0            0.0  USC00110338
+5  19850106             28.0            -39.0            0.0  USC00110338
+6  19850107             17.0            -17.0            0.0  USC00110338
+7  19850108            -11.0           -100.0            0.0  USC00110338
+8  19850109            -22.0           -106.0            0.0  USC00110338
+9  19850110            -28.0            -94.0           28.0  USC00110338,) Took 0.1824 seconds
+11/02/2022 05:10:28 PM Successfully ingested a total of 10 out of 10 records.
+11/02/2022 05:10:28 PM Process ingest_data_for_one_station([{'date': 19850101, 'max_temperature': 44.0, 'min_temperature': -50.0, 'precipitation': 295.0, 'station': 'USC00111280'}, {'date': 19850102, 'max_temperature': -50.0, 'min_temperature': -122.0, 'precipitation': 0.0, 'station': 'USC00111280'}, {'date': 19850103, 'max_temperature': -44.0, 'min_temperature': -117.0, 'precipitation': 0.0, 'station': 'USC00111280'}, {'date': 19850104, 'max_temperature': 6.0, 'min_temperature': -94.0, 'precipitation': 0.0, 'station': 'USC00111280'}, {'date': 19850105, 'max_temperature': 44.0, 'min_temperature': -67.0, 'precipitation': 0.0, 'station': 'USC00111280'}, {'date': 19850106, 'max_temperature': 33.0, 'min_temperature': -28.0, 'precipitation': 0.0, 'station': 'USC00111280'}, {'date': 19850107, 'max_temperature': 44.0, 'min_temperature': 0.0, 'precipitation': 0.0, 'station': 'USC00111280'}, {'date': 19850108, 'max_temperature': 11.0, 'min_temperature': -39.0, 'precipitation': 0.0, 'station': 'USC00111280'}, {'date': 19850109, 'max_temperature': -11.0, 'min_temperature': -50.0, 'precipitation': 0.0, 'station': 'USC00111280'}, {'date': 19850110, 'max_temperature': -28.0, 'min_temperature': -61.0, 'precipitation': 33.0, 'station': 'USC00111280'}],) Took 1.1328 seconds
+11/02/2022 05:10:28 PM No data for USC00111280 for year: 1985
+11/02/2022 05:10:28 PM Successfully ingested a total of 1 out of 1 records.
+11/02/2022 05:10:28 PM Process ingest_statistics_for_one_station(       date  max_temperature  min_temperature  precipitation      station
+0  19850101             44.0            -50.0          295.0  USC00111280
+1  19850102            -50.0           -122.0            0.0  USC00111280
+2  19850103            -44.0           -117.0            0.0  USC00111280
+3  19850104              6.0            -94.0            0.0  USC00111280
+4  19850105             44.0            -67.0            0.0  USC00111280
+5  19850106             33.0            -28.0            0.0  USC00111280
+6  19850107             44.0              0.0            0.0  USC00111280
+7  19850108             11.0            -39.0            0.0  USC00111280
+8  19850109            -11.0            -50.0            0.0  USC00111280
+9  19850110            -28.0            -61.0           33.0  USC00111280,) Took 0.1675 seconds
+11/02/2022 05:10:29 PM Successfully ingested a total of 10 out of 10 records.
+11/02/2022 05:10:29 PM Process ingest_data_for_one_station([{'date': 19850101, 'max_temperature': -11.0, 'min_temperature': -22.0, 'precipitation': 203.0, 'station': 'USC00111436'}, {'date': 19850102, 'max_temperature': -17.0, 'min_temperature': -94.0, 'precipitation': 0.0, 'station': 'USC00111436'}, {'date': 19850103, 'max_temperature': -22.0, 'min_temperature': -89.0, 'precipitation': 0.0, 'station': 'USC00111436'}, {'date': 19850104, 'max_temperature': 0.0, 'min_temperature': -61.0, 'precipitation': 0.0, 'station': 'USC00111436'}, {'date': 19850105, 'max_temperature': 50.0, 'min_temperature': -61.0, 'precipitation': 0.0, 'station': 'USC00111436'}, {'date': 19850106, 'max_temperature': 17.0, 'min_temperature': -39.0, 'precipitation': 0.0, 'station': 'USC00111436'}, {'date': 19850107, 'max_temperature': 22.0, 'min_temperature': -17.0, 'precipitation': 18.0, 'station': 'USC00111436'}, {'date': 19850108, 'max_temperature': 6.0, 'min_temperature': -44.0, 'precipitation': 0.0, 'station': 'USC00111436'}, {'date': 19850109, 'max_temperature': -17.0, 'min_temperature': -61.0, 'precipitation': 0.0, 'station': 'USC00111436'}, {'date': 19850110, 'max_temperature': -22.0, 'min_temperature': -67.0, 'precipitation': nan, 'station': 'USC00111436'}],) Took 0.9932 seconds
+11/02/2022 05:10:29 PM No data for USC00111436 for year: 1985
+11/02/2022 05:10:29 PM Successfully ingested a total of 1 out of 1 records.
+11/02/2022 05:10:29 PM Process ingest_statistics_for_one_station(       date  max_temperature  min_temperature  precipitation      station
+0  19850101            -11.0            -22.0          203.0  USC00111436
+1  19850102            -17.0            -94.0            0.0  USC00111436
+2  19850103            -22.0            -89.0            0.0  USC00111436
+3  19850104              0.0            -61.0            0.0  USC00111436
+4  19850105             50.0            -61.0            0.0  USC00111436
+5  19850106             17.0            -39.0            0.0  USC00111436
+6  19850107             22.0            -17.0           18.0  USC00111436
+7  19850108              6.0            -44.0            0.0  USC00111436
+8  19850109            -17.0            -61.0            0.0  USC00111436
+9  19850110            -22.0            -67.0            NaN  USC00111436,) Took 0.1504 seconds
+11/02/2022 05:10:30 PM Successfully ingested a total of 10 out of 10 records.
+11/02/2022 05:10:30 PM Process ingest_data_for_one_station([{'date': 19850101, 'max_temperature': 61.0, 'min_temperature': -22.0, 'precipitation': 404.0, 'station': 'USC00112140'}, {'date': 19850102, 'max_temperature': -11.0, 'min_temperature': -100.0, 'precipitation': 0.0, 'station': 'USC00112140'}, {'date': 19850103, 'max_temperature': -17.0, 'min_temperature': -83.0, 'precipitation': 0.0, 'station': 'USC00112140'}, {'date': 19850104, 'max_temperature': 17.0, 'min_temperature': -72.0, 'precipitation': 0.0, 'station': 'USC00112140'}, {'date': 19850105, 'max_temperature': 50.0, 'min_temperature': -56.0, 'precipitation': 0.0, 'station': 'USC00112140'}, {'date': 19850106, 'max_temperature': 28.0, 'min_temperature': -28.0, 'precipitation': 0.0, 'station': 'USC00112140'}, {'date': 19850107, 'max_temperature': 17.0, 'min_temperature': -11.0, 'precipitation': 0.0, 'station': 'USC00112140'}, {'date': 19850108, 'max_temperature': 17.0, 'min_temperature': -44.0, 'precipitation': 0.0, 'station': 'USC00112140'}, {'date': 19850109, 'max_temperature': -17.0, 'min_temperature': -72.0, 'precipitation': 0.0, 'station': 'USC00112140'}, {'date': 19850110, 'max_temperature': -33.0, 'min_temperature': -72.0, 'precipitation': 38.0, 'station': 'USC00112140'}],) Took 1.2635 seconds
+11/02/2022 05:10:30 PM No data for USC00112140 for year: 1985
+11/02/2022 05:10:30 PM Successfully ingested a total of 1 out of 1 records.
+11/02/2022 05:10:30 PM Process ingest_statistics_for_one_station(       date  max_temperature  min_temperature  precipitation      station
+0  19850101             61.0            -22.0          404.0  USC00112140
+1  19850102            -11.0           -100.0            0.0  USC00112140
+2  19850103            -17.0            -83.0            0.0  USC00112140
+3  19850104             17.0            -72.0            0.0  USC00112140
+4  19850105             50.0            -56.0            0.0  USC00112140
+5  19850106             28.0            -28.0            0.0  USC00112140
+6  19850107             17.0            -11.0            0.0  USC00112140
+7  19850108             17.0            -44.0            0.0  USC00112140
+8  19850109            -17.0            -72.0            0.0  USC00112140
+9  19850110            -33.0            -72.0           38.0  USC00112140,) Took 0.1787 seconds
+11/02/2022 05:10:32 PM Successfully ingested a total of 10 out of 10 records.
+11/02/2022 05:10:32 PM Process ingest_data_for_one_station([{'date': 19850101, 'max_temperature': 44.0, 'min_temperature': -44.0, 'precipitation': 328.0, 'station': 'USC00112193'}, {'date': 19850102, 'max_temperature': -39.0, 'min_temperature': -133.0, 'precipitation': 0.0, 'station': 'USC00112193'}, {'date': 19850103, 'max_temperature': -39.0, 'min_temperature': -117.0, 'precipitation': 0.0, 'station': 'USC00112193'}, {'date': 19850104, 'max_temperature': 6.0, 'min_temperature': -100.0, 'precipitation': 0.0, 'station': 'USC00112193'}, {'date': 19850105, 'max_temperature': 50.0, 'min_temperature': -67.0, 'precipitation': 0.0, 'station': 'USC00112193'}, {'date': 19850106, 'max_temperature': 28.0, 'min_temperature': -33.0, 'precipitation': 0.0, 'station': 'USC00112193'}, {'date': 19850107, 'max_temperature': 39.0, 'min_temperature': -17.0, 'precipitation': 0.0, 'station': 'USC00112193'}, {'date': 19850108, 'max_temperature': 6.0, 'min_temperature': -61.0, 'precipitation': 0.0, 'station': 'USC00112193'}, {'date': 19850109, 'max_temperature': -6.0, 'min_temperature': -67.0, 'precipitation': 0.0, 'station': 'USC00112193'}, {'date': 19850110, 'max_temperature': -17.0, 'min_temperature': -72.0, 'precipitation': 46.0, 'station': 'USC00112193'}],) Took 1.1064 seconds
+11/02/2022 05:10:32 PM No data for USC00112193 for year: 1985
+11/02/2022 05:10:32 PM Successfully ingested a total of 1 out of 1 records.
+11/02/2022 05:10:32 PM Process ingest_statistics_for_one_station(       date  max_temperature  min_temperature  precipitation      station
+0  19850101             44.0            -44.0          328.0  USC00112193
+1  19850102            -39.0           -133.0            0.0  USC00112193
+2  19850103            -39.0           -117.0            0.0  USC00112193
+3  19850104              6.0           -100.0            0.0  USC00112193
+4  19850105             50.0            -67.0            0.0  USC00112193
+5  19850106             28.0            -33.0            0.0  USC00112193
+6  19850107             39.0            -17.0            0.0  USC00112193
+7  19850108              6.0            -61.0            0.0  USC00112193
+8  19850109             -6.0            -67.0            0.0  USC00112193
+9  19850110            -17.0            -72.0           46.0  USC00112193,) Took 0.1577 seconds
+11/02/2022 05:10:33 PM Successfully ingested a total of 10 out of 10 records.
+11/02/2022 05:10:33 PM Process ingest_data_for_one_station([{'date': 19850101, 'max_temperature': 0.0, 'min_temperature': -78.0, 'precipitation': 178.0, 'station': 'USC00112348'}, {'date': 19850102, 'max_temperature': -22.0, 'min_temperature': -244.0, 'precipitation': 0.0, 'station': 'USC00112348'}, {'date': 19850103, 'max_temperature': -111.0, 'min_temperature': -261.0, 'precipitation': 0.0, 'station': 'USC00112348'}, {'date': 19850104, 'max_temperature': -56.0, 'min_temperature': -256.0, 'precipitation': 0.0, 'station': 'USC00112348'}, {'date': 19850105, 'max_temperature': 0.0, 'min_temperature': -228.0, 'precipitation': 0.0, 'station': 'USC00112348'}, {'date': 19850106, 'max_temperature': 33.0, 'min_temperature': -78.0, 'precipitation': 0.0, 'station': 'USC00112348'}, {'date': 19850107, 'max_temperature': 33.0, 'min_temperature': -39.0, 'precipitation': 0.0, 'station': 'USC00112348'}, {'date': 19850108, 'max_temperature': 17.0, 'min_temperature': -89.0, 'precipitation': 0.0, 'station': 'USC00112348'}, {'date': 19850109, 'max_temperature': -6.0, 'min_temperature': -122.0, 'precipitation': 0.0, 'station': 'USC00112348'}, {'date': 19850110, 'max_temperature': -17.0, 'min_temperature': -111.0, 'precipitation': 15.0, 'station': 'USC00112348'}],) Took 1.3590 seconds
+11/02/2022 05:10:33 PM No data for USC00112348 for year: 1985
+11/02/2022 05:10:33 PM Successfully ingested a total of 1 out of 1 records.
+11/02/2022 05:10:33 PM Process ingest_statistics_for_one_station(       date  max_temperature  min_temperature  precipitation      station
+0  19850101              0.0            -78.0          178.0  USC00112348
+1  19850102            -22.0           -244.0            0.0  USC00112348
+2  19850103           -111.0           -261.0            0.0  USC00112348
+3  19850104            -56.0           -256.0            0.0  USC00112348
+4  19850105              0.0           -228.0            0.0  USC00112348
+5  19850106             33.0            -78.0            0.0  USC00112348
+6  19850107             33.0            -39.0            0.0  USC00112348
+7  19850108             17.0            -89.0            0.0  USC00112348
+8  19850109             -6.0           -122.0            0.0  USC00112348
+9  19850110            -17.0           -111.0           15.0  USC00112348,) Took 0.1923 seconds
+11/02/2022 05:10:35 PM Successfully ingested a total of 10 out of 10 records.
+11/02/2022 05:10:35 PM Process ingest_data_for_one_station([{'date': 19850101, 'max_temperature': 128.0, 'min_temperature': -28.0, 'precipitation': 18.0, 'station': 'USC00112483'}, {'date': 19850102, 'max_temperature': -22.0, 'min_temperature': -78.0, 'precipitation': 0.0, 'station': 'USC00112483'}, {'date': 19850103, 'max_temperature': -28.0, 'min_temperature': -67.0, 'precipitation': 79.0, 'station': 'USC00112483'}, {'date': 19850104, 'max_temperature': -22.0, 'min_temperature': -89.0, 'precipitation': 0.0, 'station': 'USC00112483'}, {'date': 19850105, 'max_temperature': 44.0, 'min_temperature': -50.0, 'precipitation': 0.0, 'station': 'USC00112483'}, {'date': 19850106, 'max_temperature': -6.0, 'min_temperature': -61.0, 'precipitation': 0.0, 'station': 'USC00112483'}, {'date': 19850107, 'max_temperature': 33.0, 'min_temperature': -22.0, 'precipitation': 0.0, 'station': 'USC00112483'}, {'date': 19850108, 'max_temperature': 11.0, 'min_temperature': -56.0, 'precipitation': 0.0, 'station': 'USC00112483'}, {'date': 19850109, 'max_temperature': -11.0, 'min_temperature': -44.0, 'precipitation': 18.0, 'station': 'USC00112483'}, {'date': 19850110, 'max_temperature': -11.0, 'min_temperature': -67.0, 'precipitation': 0.0, 'station': 'USC00112483'}],) Took 1.5412 seconds
+11/02/2022 05:10:35 PM No data for USC00112483 for year: 1985
+11/02/2022 05:10:35 PM Successfully ingested a total of 1 out of 1 records.
+11/02/2022 05:10:35 PM Process ingest_statistics_for_one_station(       date  max_temperature  min_temperature  precipitation      station
+0  19850101            128.0            -28.0           18.0  USC00112483
+1  19850102            -22.0            -78.0            0.0  USC00112483
+2  19850103            -28.0            -67.0           79.0  USC00112483
+3  19850104            -22.0            -89.0            0.0  USC00112483
+4  19850105             44.0            -50.0            0.0  USC00112483
+5  19850106             -6.0            -61.0            0.0  USC00112483
+6  19850107             33.0            -22.0            0.0  USC00112483
+7  19850108             11.0            -56.0            0.0  USC00112483
+8  19850109            -11.0            -44.0           18.0  USC00112483
+9  19850110            -11.0            -67.0            0.0  USC00112483,) Took 0.1629 seconds
+11/02/2022 05:10:36 PM Successfully ingested a total of 10 out of 10 records.
+11/02/2022 05:10:36 PM Process ingest_data_for_one_station([{'date': 19850101, 'max_temperature': 0.0, 'min_temperature': -67.0, 'precipitation': 345.0, 'station': 'USC00113335'}, {'date': 19850102, 'max_temperature': -44.0, 'min_temperature': -222.0, 'precipitation': 0.0, 'station': 'USC00113335'}, {'date': 19850103, 'max_temperature': -144.0, 'min_temperature': -217.0, 'precipitation': 0.0, 'station': 'USC00113335'}, {'date': 19850104, 'max_temperature': -133.0, 'min_temperature': -194.0, 'precipitation': 0.0, 'station': 'USC00113335'}, {'date': 19850105, 'max_temperature': -22.0, 'min_temperature': -172.0, 'precipitation': 0.0, 'station': 'USC00113335'}, {'date': 19850106, 'max_temperature': 17.0, 'min_temperature': -44.0, 'precipitation': 0.0, 'station': 'USC00113335'}, {'date': 19850107, 'max_temperature': 22.0, 'min_temperature': -22.0, 'precipitation': 0.0, 'station': 'USC00113335'}, {'date': 19850108, 'max_temperature': 6.0, 'min_temperature': -106.0, 'precipitation': 0.0, 'station': 'USC00113335'}, {'date': 19850109, 'max_temperature': -39.0, 'min_temperature': -106.0, 'precipitation': 0.0, 'station': 'USC00113335'}, {'date': 19850110, 'max_temperature': -28.0, 'min_temperature': -100.0, 'precipitation': 15.0, 'station': 'USC00113335'}],) Took 1.3058 seconds
+11/02/2022 05:10:37 PM No data for USC00113335 for year: 1985
+11/02/2022 05:10:37 PM Successfully ingested a total of 1 out of 1 records.
+11/02/2022 05:10:37 PM Process ingest_statistics_for_one_station(       date  max_temperature  min_temperature  precipitation      station
+0  19850101              0.0            -67.0          345.0  USC00113335
+1  19850102            -44.0           -222.0            0.0  USC00113335
+2  19850103           -144.0           -217.0            0.0  USC00113335
+3  19850104           -133.0           -194.0            0.0  USC00113335
+4  19850105            -22.0           -172.0            0.0  USC00113335
+5  19850106             17.0            -44.0            0.0  USC00113335
+6  19850107             22.0            -22.0            0.0  USC00113335
+7  19850108              6.0           -106.0            0.0  USC00113335
+8  19850109            -39.0           -106.0            0.0  USC00113335
+9  19850110            -28.0           -100.0           15.0  USC00113335,) Took 0.1791 seconds
+11/02/2022 05:10:39 PM Successfully ingested a total of 30 out of 30 records.
+11/02/2022 05:10:40 PM Process ingest_data_for_one_crop('US_corn_grain_yield.txt',) Took 2.9493 seconds

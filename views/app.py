@@ -1,23 +1,34 @@
-from flask import jsonify, Flask, request
-from models import Weather
+from flask import Flask, request
 import logging
-from controllers.app_controllers import get_weather_data_by_station_and_date
-
-logging.basicConfig(filename="logs/api.log", filemode="w", encoding="utf-8", level=logging.DEBUG)
-
+from controllers.app_controllers import (
+    get_weather_data_by_station_and_date,
+    get_crop_yield_data_by_year,
+    get_weather_statistics,
+)
 from config.flask_and_database import db, app
 
-
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+logging.basicConfig(
+    filename="logs/api.log", filemode="w", encoding="utf-8", level=logging.DEBUG
+)
 
 
 @app.route("/api/weather", methods=["GET"])
 def get_weather():
-    # query = Weather.query.first()
-    # return query.to_dict()
     query_results = get_weather_data_by_station_and_date(request.args)
+    results = [result.to_dict() for result in query_results]
+    return results
+
+
+@app.route("/api/yield", methods=["GET"])
+def get_crop_yield():
+    query_results = get_crop_yield_data_by_year(request.args)
+    results = [result.to_dict() for result in query_results]
+    return results
+
+
+@app.route("/api/weather/stats", methods=["GET"])
+def get_weather_stats():
+    query_results = get_weather_statistics(request.args)
     results = [result.to_dict() for result in query_results]
     return results
 
